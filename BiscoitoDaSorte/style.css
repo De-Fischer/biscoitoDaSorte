@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  background: #FFFFFF;
+  border-radius: .5rem;
+  padding: 4.8rem 6.4rem;
+
+  width: min(42.8rem, 90%); /*quando a tela estiver menor que 42.8rem mantém 90%*/
+  text-align: center;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+h2, h3, p, img {
+  padding: 1.7rem 0;
+}
+
+img {
+  padding: 4.3rem 0;
+  cursor: pointer; /*mostra a maozinha*/
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  color: #34355b;
+}
+
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #34355b;
+}
+
+p {
+  font-family: 'Dancing Script';
+  font-size: 2.4rem;
+  color: #000000;
+  background: #E4EDF1;
+  padding-top: 1rem;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background: #FF9500;
+  padding: 1.6rem;
+  border-radius: .4rem;
+  border: 0;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+button:hover {
+  background: #b16801;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+/* Biscoito tremendo */
+.vibrate {
+	animation: none;
+}
+
+.vibrate:hover {
+  animation: vibrate 0.5s linear infinite both;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  30% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, -2px);
+  }
+  70% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+  90% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/*Mensagem aparecendo*/
+.scale {
+	animation: scale 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;      
+}
+
+
+@keyframes scale {
+  0% {
+    transform: translateZ(-1400px) translateY(100px) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  50% {
+    transform: translateZ(0) translateY(0) scale(1);
+    transform-origin: 50% 100%;
+    opacity: 10;
+  }
+}
+
